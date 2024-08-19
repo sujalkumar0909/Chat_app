@@ -1,0 +1,143 @@
+.chat{
+    flex:2;
+    border-left:1px solid rgb(74, 71, 71);
+    border-right:1px solid rgb(74, 71, 71);
+    height:100%;
+    display:flex;
+    flex-direction:column ;
+
+    .top{
+        padding:20px;
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        border-bottom:1px solid rgb(76, 71, 71);
+        .user{
+            display:flex;
+            align-items:center;
+            gap:20px;
+            img{
+                width:60px;
+                height:60px;
+                border-radius:50%;
+                object-fit:cover;
+            }
+            .texts{
+                display:flex;
+                flex-direction:column;
+                gap:5px;
+                span{
+                    font-size: 20px;
+                    font-weight:bold;
+                }
+                p{
+                    font-size:15px;
+                    font-weight:300;
+                    color:aliceblue;
+                }
+            }
+        }
+        .icons{
+            display:flex;
+            gap:20px;
+        }
+        img{
+            width:20px;
+            height:20px;
+            cursor:pointer;
+        }
+    }
+    .center{
+     padding:20px;
+     flex:1;
+     overflow:auto;
+     display:flex;
+     flex-direction:column;
+     gap:20px;
+     .message{
+        max-width:70%;
+        display:flex;
+        gap:20px;
+
+        &.own{
+            align-self:flex-end;
+            .texts{
+                p{
+                    background-color:blue; 
+                }
+            }
+        }
+        img{
+            width:50px;
+            height:50px;
+            border-radius:50%;
+            object-fit:cover;
+        }
+        .texts{
+            flex:1;
+            display:flex;
+            flex-direction: column;
+            gap:5px;
+            img{
+                width:100%;
+                height:300px;
+                border-radius:10px;
+                object-fit:cover;
+            }
+            p{
+               padding:20px;
+               background-color: rgba(75, 75, 77, 0.521); 
+               border-radius:10px;
+            }
+            span{
+                font-size:13px;
+            }
+        }
+     }
+    }
+    .bottom{
+        padding:20px;
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        gap:20px;
+        border-top:1px solid rgb(75, 74, 74);
+        margin-top:auto;
+
+        .icons{
+            display:flex;
+            gap:20px;
+            img{
+                width:20px;
+                height:20px;
+                cursor:pointer;
+            }
+        }
+        input{
+            flex:1;
+            background-color:rgba(41, 41, 41, 0.438);
+            border:none;
+            border-radius:10px;
+            outline:none;
+            color:aliceblue;
+            padding:20px;
+            font-size:15px;
+        }
+        .emoji{
+            position:relative;
+            .picker{
+                position:absolute;
+                bottom:50px;
+                left:0;
+            }
+        }
+        .sendbutton{
+            background: rgb(34, 34, 237);
+            color:white;
+            padding:10px 20px;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+        }
+    }
+}
